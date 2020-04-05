@@ -12,6 +12,7 @@
     "webpack-dev-server": "^3.10.3"
   },
   "scripts": {
+    "engineStrict" : true ,
     "build": "webpack --config webpack.config.js"
   }
 }
