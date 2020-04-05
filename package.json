@@ -13,6 +13,8 @@
   },
   "scripts": {
     "engineStrict": true,
-    "build": "webpack --config webpack.config.js"
+    "build": "webpack --config webpack.config.js",
+    "postinstall": "cd client && npm install"
   }
+
 }
