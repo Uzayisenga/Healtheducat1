@@ -5,3 +5,4 @@
 //= link owl.carousel.min.js
 //= link smoothscroll.js
 //= link custom.js
+//= link jquery.js
