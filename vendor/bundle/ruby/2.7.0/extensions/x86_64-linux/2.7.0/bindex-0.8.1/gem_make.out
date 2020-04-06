@@ -1,0 +1,15 @@
+current directory: /home/amina/HealthEducat1/vendor/bundle/ruby/2.7.0/gems/bindex-0.8.1/ext/skiptrace
+/home/amina/.rvm/rubies/ruby-2.7.0/bin/ruby -I /home/amina/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0 -r ./siteconf20200406-14370-euqhk2.rb extconf.rb
+creating Makefile
+
+current directory: /home/amina/HealthEducat1/vendor/bundle/ruby/2.7.0/gems/bindex-0.8.1/ext/skiptrace
+make "DESTDIR=" clean
+
+current directory: /home/amina/HealthEducat1/vendor/bundle/ruby/2.7.0/gems/bindex-0.8.1/ext/skiptrace
+make "DESTDIR="
+compiling cruby.c
+linking shared-object skiptrace/internal/cruby.so
+
+current directory: /home/amina/HealthEducat1/vendor/bundle/ruby/2.7.0/gems/bindex-0.8.1/ext/skiptrace
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 cruby.so ./.gem.20200406-14370-1guit3m/skiptrace/internal
