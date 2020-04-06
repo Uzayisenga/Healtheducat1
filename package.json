@@ -10,16 +10,8 @@
   "version": "0.1.0",
   "devDependencies": {
     "webpack-dev-server": "^3.10.3"
-  },
-  "scripts": {
-    "engineStrict": true,
-    "build": "webpack --config webpack.config.js",
-    "postinstall": "cd client && npm install"
-  },
-
-    "engines" : { 
-      "node" : "13.12.0" 
-    }
+  }
+  
   
 
 }
