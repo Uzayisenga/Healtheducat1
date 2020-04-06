@@ -1,3 +1,4 @@
+
 {
   "name": "HealthEdu",
   "private": true,
@@ -5,19 +6,14 @@
     "@rails/actioncable": "^6.0.0",
     "@rails/activestorage": "^6.0.0",
     "@rails/ujs": "^6.0.0",
-    "turbolinks": "^5.2.0",
-    "engines": {
-      "node": "13.12.0"
-    }
+    "@rails/webpacker": "4.2.2",
+    "turbolinks": "^5.2.0"
   },
-  
   "version": "0.1.0",
   "devDependencies": {
-    "webpack-dev-server": "^3.10.3"
-  },
-  "scripts": {
-    "engineStrict": true,
-    "build": "webpack --config webpack.config.js",
-    "postinstall": "cd client && npm install"
+    "webpack-dev-server": "^3.10.1"
   }
 }
+
+
+
