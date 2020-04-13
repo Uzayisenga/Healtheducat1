@@ -1,0 +1,42 @@
+<% if !logged_in? %>
+<h2>Sign up</h2>
+<%= error_messages_for 'user' %>
+<p>Please fill in all fields</p>
+<p>Your user name and password must be between 5 and 40 alphanumeric characters.</p>
+<p>Please do not submit web mail addresses, like <b>hotmail, gmail</b> and others. Use your e-mail address with your ISP.</p>
+<p><strong>Your email address must be valid.</strong> We will send you an email which you must use to activate your account.
+You will not be able to log in or upload announcements until your account is activated.</p>
+<% form_for(:user, @user, :url => {:action=> 'new'}) do |f| %>
+<fieldset>
+<legend>New User Data</legend>
+<p>
+<label for='user_login'>Username</label><br/>
+<%= f.text_field :login, :size => 40 %>
+</p>
+<p>
+<label for='user_name'>First Name</label><br/>
+<%= f.text_field :name, :size => 40 %>
+</p>
+<p>
+<label for='user_surname'>Surname or Last Name</label><br/>
+<%= f.text_field :surname, :size => 40 %>
+</p>
+<p>
+<label for='user_password'>Password</label><br/>
+<%= f.password_field :password, :size => 40 %>
+</p>
+<p>
+<label for='user_password_confirmation'>Password Confirmation</label><br/>
+<%= f.password_field :password_confirmation, :size => 40 %><br/>
+</p>
+<p>
+<label for='user_email'>Email</label><br/>
+<%= f.text_field :email,  :size => 40 %><br/>
+</p>
+<%= submit_tag 'Signup' %>
+</fieldset>
+<% end %>
+<% else %>
+<h2>You are already logged in and therefore signed up</h2>
+<% end %>
+		
