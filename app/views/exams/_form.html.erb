@@ -1,0 +1,46 @@
+<%= form_with(model: exam, local: true) do |form| %>
+  <% if exam.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(exam.errors.count, "error") %> prohibited this exam from being saved:</h2>
+
+      <ul>
+        <% exam.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :marks %>
+    <%= form.text_field :marks %>
+  </div>
+
+  <div class="field">
+    <%= form.label :attempty %>
+    <%= form.text_field :attempty %>
+  </div>
+
+  <div class="field">
+    <%= form.label :course_id %>
+    <%= form.text_field :course_id %>
+  </div>
+
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+  <%= form_with(model: exam, id: "new_exam", local: true) do |form| %> ... <% end %> <%= tag.div id: "ajax" %>
+  <%= tag.div id: "sjr" %>
+
+  <%= form_with(model: exam, id: "new_exam") do |form| %>
+    ...
+  <% end %>
+  
+  # =>
+  <form action="/exams" id="new_exam" method="post" data-remote="true">
+    ...
+  </form>
+
+
+<% end %>

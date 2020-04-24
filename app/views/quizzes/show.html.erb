@@ -1,0 +1,27 @@
+<h2>Questions</h2>
+
+ <% @quiz.mc_questions.each do |question| %>
+  
+   <div id="<%= dom_id(question) %>">
+     <p>
+       <%= question.question %>
+       <%= link_to '🔎', mc_question_path(question) %>
+       <%= link_to '🖋', edit_mc_question_path(question) %>
+       <%= link_to '🗑', mc_question_path(question), method: :delete %>
+     </p>
+
+     <%
+     choices = [question.answer, question.distractor_1]
+     choices << question.distractor_2 if !question.distractor_2.blank?
+     choices << question.distractor_3 if !question.distractor_3.nil?
+     choices.each do |c|
+     %>
+       <div>
+         <%= radio_button_to "guess_#{question.id}", c, checked = c == question.answer, disabled: true %>
+         <%= label_tag "guess_#{question.id}_#{c}", c %>
+       </div>
+
+     <% end %>
+   </div>
+ <% end %>
+ <%= link_to 'New Question', new_quiz_mc_question_path(@quiz, @mc_question) %>

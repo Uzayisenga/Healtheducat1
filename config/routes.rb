@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  resources :results
+  resources :assesments
+  resources :quizzes
+  resources :mc_questions
+  resources :exams
+  resources :courses
   resources :users
   resources :posts
   get 'course/assesment'
@@ -6,5 +12,7 @@ Rails.application.routes.draw do
   get 'logins/login'
   root 'welcome#index'
   resources :account_activations, only: [:edit]
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  resources :quizzes do
+    resources :mc_questions
+  end
 end

@@ -1,0 +1,19 @@
+<p><%= question.question %></p>
+
+<%
+choices = [question.answer, question.distractor_1, question.distractor_2, question.distractor_3]
+choices.each do |c|
+%>
+  <div class="custom-control custom-radio">
+    <%= radio_button_tag "guess", c, checked = c == question.answer, enabled: true %>
+    <%= label_tag "guess_#{c}", c %>
+  </div>
+  
+<% end %>
+<% @question.answers.each do |answer| %>
+  <li>
+    <%= radio_button_tag("answer[#{question.id}]", answer.id) %>
+    <%= label("answer_".concat(answer.id.to_s).to_sym, answer.content) %>
+ </li>
+<% end %>
+<%= f.submit_button "Result" %>

@@ -1,0 +1,343 @@
+$('#exams').html("<%= j (render @exams) %>");
+$('#exam-form').slideUp(350);
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>This Simple exam for HealthEdu</title>
+
+
+    <script src="https://unpkg.com/jquery"></script>
+<script src="https://surveyjs.azureedge.net/1.5.15/survey.jquery.js"></script>
+<link href="https://surveyjs.azureedge.net/1.5.15/modern.css" type="text/css" rel="stylesheet" />
+<style type='text/css'>
+
+
+</style>
+
+</head>
+<body>
+    
+            <div id="surveyElement" style="display:inline-block;width:100%;">
+            </div>
+    <div id="surveyResult"></div>
+
+<script type="text/javascript">
+
+
+    
+  
+Survey
+.StylesManager
+.applyTheme("modern");
+var json = {
+title: "HealthEdu Exam",
+showProgressBar: "bottom",
+showTimerPanel: "top",
+maxTimeToFinishPage: 200,
+maxTimeToFinish: 2500,
+firstPageIsStarted: true,
+startSurveyText: "Start Quiz",
+pages: [
+    {
+        questions: [
+            {
+                type: "html",
+                html: "Thank you for your interest in the CPD Examination.<br/>You have 2 minutes for every page and 45 minutes for the whole survey of 17 questions.<br/>Please click on <b>'Start Quiz'</b> button when you are ready."
+            },{
+            type: "text",
+            name: "name",
+            title: "Your name:"
+        }, {
+            type: "text",
+            name: "email",
+            title: "Your e-mail"
+        }
+        ]
+    }, {
+        questions: [
+            {
+                type: "radiogroup",
+                name: "HealthEdu",
+                title: "One Health",
+                choices: [
+                    "Is the strategy that involves specific strategy to halt diseases that can affect only humans", "Is the strategy that intensify multi-sectorial collaborations and communications in all health care aspects only for animal and environment", "Is the universal strategy to intensify interdisciplinary collaborations and communications in all aspects of health care for humans, animal and environment", "all the above are correct"
+                ],
+                correctAnswer: "Is the universal strategy to intensify interdisciplinary collaborations and communications in all aspects of health care for humans, animal and environment"
+            }
+        ]
+    }, {
+        questions: [
+            {
+                type: "radiogroup",
+                name: "HealthEdu",
+                title: "More people live in close contact with wild and domestic animals,and this lead to:",
+                choicesOrder: "random",
+                choices: [
+                    "more opportunities for diseases to pass between animals and people.", "more opportunities for prevention of diseases that can pass between animals and people.", "more opportunities for diseases to pass between animals only"
+                ],
+                correctAnswer: "more opportunities for diseases to pass between animals and people."
+            }
+        ]
+    }, 
+    {
+        questions: [
+            {
+                type: "radiogroup",
+                name: "domestic animal",
+                title: "Disruptions in environmental conditions and habits provide new opportunities for diseases to pass to",
+                choicesOrder: "random",
+                choices: [
+                    "only in animal", "only human", "both in human and animal"
+                ],
+                correctAnswer: "both in human and animal"
+            }
+        ]
+    },{
+        questions: [
+            {
+                type: "radiogroup",
+                name: "domestic animal",
+                title: "Overall , one Health comprises of :",
+                choicesOrder: "random",
+                choices: [
+                    "only Individual health and Public health", "Neither nor animal health or Public health", "Economic health ,Ecosystem health ,animal health ,individual and public health"
+                ],
+                correctAnswer: "Economic health ,Ecosystem health ,animal health ,individual and public health"
+            }
+        ]
+    },{
+        questions: [
+            {
+                type: "radiogroup",
+                name: "domestic animal",
+                title: "One Health Four Major Lines of Work are:",
+                choicesOrder: "random",
+                choices: [
+                    "Wildlife pathogen detection, animal health, Outbreak response capacity and Risk reduction.", "Wildlife pathogen detection, Risk determination, Wildlife pathogen detection, Risk determination, individual health and Risk reduction"
+                ],
+                correctAnswer: "Wildlife pathogen detection, Risk determination, Outbreak response capacity and Risk reduction."
+            }
+        ]
+    },{
+        questions: [
+            {
+                type: "radiogroup",
+                name: "domestic animal",
+                title: "One health house was launched in 2010 in Kampala, Uganda and is composed of:",
+                choicesOrder: "random",
+                choices: [
+                    "all school of public health ,veterinary medicine from Uganda, Rwanda, Tanzania,RDC Kenya, and Ethiopia", "All school of public health ,veterinary medicine from Uganda, Rwanda,Tanzania, RDC Kenya, and Mozambique.", "all school of public health ,veterinary medicine from Uganda, Rwanda,Tanzania, RDC Kenya, and Bostwana", "all school of public health ,veterinary medicine from Uganda, Namibia,Tanzania, RDC Kenya, and Ethiopia"
+                ],
+                correctAnswer: "all school of public health ,veterinary medicine from Uganda, Rwanda, Tanzania,RDC Kenya, and Ethiopia."
+            }
+        ]
+    },{
+        questions: [
+            {
+                type: "radiogroup",
+                name: "domestic animal",
+                title: "In regard to animal and Human interactions ,the following statement is true:",
+                choicesOrder: "random",
+                choices: [
+                    "Between animal and human medicine there are no dividing lines — nor should there be.", "Between animal and human medicine there are dividing lines and will be always there.", "c)Between animal and human medicine there are no clear dividing lines but soon should there be"
+                ],
+                correctAnswer: "Between animal and human medicine there are no dividing lines — nor should there be."
+            }
+        ]
+    },{
+        questions: [
+            {
+                type: "radiogroup",
+                name: "domestic animal",
+                title: "Manhattan Principles for one health initiative come up with :",
+                choicesOrder: "random",
+                choices: [
+                    "Twelve recommendations for establishing a more holistic approach to preventing epidemic/epizootic disease and for maintaining ecosystem integrity for the beneﬁt of humans,their domesticated animals, and the foundational biodiversity that supports us all.", "Twelve recommendations for establishing a single approach to preventing epidemic/epizootic disease and for maintaining ecosystem integrity for the beneﬁt of humans, their domesticated animals, and the foundational biodiversity that supports us as Human being.", "Twelve recommendations for establishing a more holistic approach to preventing epidemic/epizootic disease and for maintaining ecosystem integrity for the beneﬁt of humans,their domesticated animals, and the foundational biodiversity that supports us all but more importantly Human being."
+                ],
+                correctAnswer: "Twelve recommendations for establishing a more holistic approach to preventing epidemic/epizootic disease and for maintaining ecosystem integrity for the beneﬁt of humans,their domesticated animals, and the foundational biodiversity that supports us all"
+            }
+        ]
+    },{
+        questions: [
+            {
+                type: "radiogroup",
+                name: "domestic animal",
+                title: "During risk based assessment ,the one health team must focus on:",
+                choicesOrder: "random",
+                choices: [
+                    "High risk host species.", "High risk microbial agents.", "High risk populations.", "The geographic “hot spots” that host these 3 variables represent some of the most remote and least-accessed regions of the earth", "all the above"
+                ],
+                correctAnswer: "all the above."
+            }
+        ]
+    },{
+        questions: [
+            {
+                type: "radiogroup",
+                name: "domestic animal",
+                title: "Emerging diseases are defined as:",
+                choicesOrder: "random",
+                choices: [
+                    "Newly identified &amp; previously unknown infectious agents that cause public health problems either locally or internationally.", "Newly identified and  previously known infectious agents that cause public health problems either locally or internationally.", "Ancient infectious agents that cause public health problems either locally or internationally."
+                ],
+                correctAnswer: "Newly identified &amp; previously unknown infectious agents that cause public health problems either locally or internationally"
+            }
+        ]
+    },{
+        questions: [
+            {
+                type: "radiogroup",
+                name: "domestic animal",
+                title: "Re-emerging diseases are defined as :",
+                choicesOrder: "random",
+                choices: [
+                    "Infectious agents that have been known for some time, had fallen to such low levels that they were no longer considered as public health problems and are now showing upward trends in incidence or prevalence worldwide or have appeared in areas where they were not previously found.", "Infectious agents that have been unknown for some time, had increased to the levels that they were highly considered as public health problems globally.", "Infectious agents that have been known for some time and are now showing upward trends in incidence or prevalence and have to appear only in areas where they were not previously  found."
+                ],
+                correctAnswer: "Infectious agents that have been known for some time, had fallen to such low levels that they were no longer considered as public health problems and are now showing upward trends in incidence or prevalence worldwide or have appeared in areas where they were not previously found."
+            }
+        ]
+    },{
+        questions: [
+            {
+                type: "radiogroup",
+                name: "domestic animal",
+                title: "More people live in close contact with wild and domestic animals and this lead to:",
+                choicesOrder: "random",
+                choices: [
+                    "more opportunities for diseases to pass between animals and people.", "more opportunities for prevention of diseases that can pass between animals and people.", "more opportunities for diseases to pass between animals only"
+                ],
+                correctAnswer: "more opportunities for diseases to pass between animals and people."
+            }
+        ]
+    },{
+        questions: [
+            {
+                type: "radiogroup",
+                name: "domestic animal",
+                title: "More people live in close contact with wild and domestic animals and this lead to:",
+                choicesOrder: "random",
+                choices: [
+                    "more opportunities for diseases to pass between animals and people.", "more opportunities for prevention of diseases that can pass between animals and people.", "more opportunities for diseases to pass between animals only"
+                ],
+                correctAnswer: "more opportunities for diseases to pass between animals and people."
+            }
+        ]
+    },{
+        questions: [
+            {
+                type: "radiogroup",
+                name: "domestic animal",
+                title: "In regard to environment, the following statement is correct:",
+                choicesOrder: "random",
+                choices: [
+                    "Fundamentally, the environment affects how organisms live, thrive, and interact and must be considered in order to achieve optimal health for people only.", "Fundamentally, the environment affects how organisms live, thrive, and interact and must be considered in order to achieve optimal health for animals only.", "Fundamentally, the environment affects how organisms live, thrive, and interact and must be considered in order to achieve optimal health for people and animals"
+                ],
+                correctAnswer: "Fundamentally, the environment affects how organisms live, thrive, and interact and must be considered in order to achieve optimal health for people and animals."
+            }
+        ]
+    },{
+        questions: [
+            {
+                type: "radiogroup",
+                name: "domestic animal",
+                title: "Hunting is important to consider for human health for the following reasons:",
+                choicesOrder: "random",
+                choices: [
+                    "is a risk factor for disease emergence.", "is a source of nutrition.", "is a driver of local biodiversity extermination.", "the process of hunting, butchering, and cooking the animal creates opportunities for body ﬂuid transfer and transmission of diseases from wildlife to humans", "all the above"
+                ],
+                correctAnswer: "all the above"
+            }
+        ]
+    },{
+        questions: [
+            {
+                type: "radiogroup",
+                name: "domestic animal",
+                title: "A One Health approach can help to accomplish its goal by:",
+                choicesOrder: "random",
+
+                choices: [
+                    "Integrating and coordinating disease prevention, surveillance, and response and Improving communication among human health, animal health, and environmental professionals.", "Addressing the upstream drivers of disease emergence, such as land-use change (e.g.,deforestation, agriculture) and Improving land-use planning to slow deforestation, enhance agricultural efﬁciency, and better manage livestock numbers and density.", "Adapting to and mitigating the predicted effects of climate change and increasing contact among humans, livestock, and wildlife without compromising normal wildlife movements or wildlife access to critical habitat.", "A and b are the best answers", "Adapting to and mitigating the predicted effects of climate change and increasing contactamong humans, livestock, and wildlife without compromising normal wildlife movements or wildlife access to critical habitat."
+                ],
+                correctAnswer: "A and b are the best answers."
+            }
+        ]
+    },{
+        questions: [
+            {
+                type: "radiogroup",
+                name: "domestic animal",
+                title: "The following statement is true about Neglected diseases :",
+                choicesOrder: "random",
+                choices: [
+                    "These diseases, often referred to as neglected diseases because they are poorly considered and include some highly important diseases such as bovine tuberculosis, trypanosomiasis , anthrax, rabies,brucellosis, echinococcosis, cysticercosis , and leishmaniasis.", "These diseases have the largest effect on poorer communities in the developing world that rely on livestock for their livelihoods however Neglected diseases could not been addressed by incorporating One Health surveillance and treatment methods within both human and animal populations, and no funding required", "Their neglected status often stems from underreporting, poor diagnostics, and a lack of funding.", "A and C are correct."
+                ],
+                correctAnswer: "A and C are correct."
+            }
+        ]
+    },{
+        questions: [
+            {
+                type: "radiogroup",
+                name: "domestic animal",
+                title: "The following statements are true about one health approach except:",
+                choicesOrder: "random",
+                choices: [
+                    "One Health is synergistic, as it aims to shift the focus from single disease to strengthening public and animal health systems, while also recognizing the environmental and social drivers of health.", "b)To achieve this synergy, there must be a delicate balance between improving collaboration and cooperation while also acknowledging the distinct objectives and management principles of each discipline involved.", "If One Health is successfully implemented, there should be improved and efficiency in logistics, the enhanced provisioning of services globally, and the strengthening of health systems however One Health system could not ultimately reduce the lag time for detecting emerging diseases and could not improve response and prevention."
+                ],
+                correctAnswer: "If One Health is successfully implemented, there should be improved and efficiency in logistics, the enhanced provisioning of services globally, and the strengthening of health systems however One Health system could not ultimately reduce the lag time for detecting emerging diseases and could not improve response and prevention"
+            }
+        ]
+    },{
+        questions: [
+            {
+                type: "radiogroup",
+                name: "domestic animal",
+                title: "The following findings were recorded by Rwanda one health situational analysis in 2014 except :",
+                choicesOrder: "random",
+                choices: [
+                    "There is lack of collaboration within and between institutions on zoonotic disease surveillance, outbreak investigation and response", "The capacity of laboratories (human and animal) to confirm priority diseases is still weak and needs improvement.", "Political will, capacity and infrastructure necessary to support collaboration between the animal and human health sectors exist although there is need for a coordination and mechanism that provides a framework for developing collaborations", "There is a lack of an electronic surveillance reporting system for both human and animal health that can be leveraged on to make a joint surveillance system"
+                ],
+                correctAnswer: "There is a lack of an electronic surveillance reporting system for both human and animal health that can be leveraged on to make a joint surveillance system"
+            }
+        ]
+    },{
+        maxTimeToFinish: 900,
+        questions: [
+            {
+                type: "radiogroup",
+                name: "International travel",
+                title: "The increase in International travel and trade can provide opportunities for:",
+                choicesOrder: "random",
+                choices: [
+                    "diseases to spread quickly across the globe to affect both animal and Human", "diseases to spread quickly across the globe to affect only Human", "A and B are correct"
+                ],
+                correctAnswer: "diseases to spread quickly across the globe to affect both animal and Human"
+            }
+        ]
+    }
+],
+completedHtml: "<h4>Email <b>{email}</b> Name<b>{name}</b>  Have answered correctly <b>{correctedAnswers}</b> questions from <b>{questionCount}</b>.</h4>"
+};
+
+window.survey = new Survey.Model(json);
+
+survey
+.onComplete
+.add(function (result) {
+    document
+        .querySelector('#surveyResult')
+        .textContent = "Result JSON:\n" + JSON.stringify(result.data, null, 3);
+});
+
+$("#surveyElement").Survey({model: survey});
+document.getElementById("sjr").innerHTML = "<%= @exam.marks %>";
+document.getElementById("sjr").innerHTML = "<%= @exam.attempty %>";
+document.getElementById("sjr").innerHTML = "<%= @exam.user_id %>";
+document.getElementById("sjr").innerHTML = "<%= @exam.course_id %>";
+document.getElementById("sjr").innerHTML = "<%= @exam.exam_id %>";
+document.getElementById("sjr").innerHTML = "<%= j render @exam %>";
+
+</script>
+</body>
+</html>

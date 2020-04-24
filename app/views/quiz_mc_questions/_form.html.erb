@@ -1,0 +1,42 @@
+<%= form_for(McQuestion.new) do |f| %>
+  <% if f.object.errors.any? %>
+              <div id="error_explanation">
+                <h2><%= pluralize(@f.object.errors.count, "error") %> prohibited this post from being saved:</h2>
+
+                <ul>
+                <% f.object.errors.full_messages.each do |message| %>
+                  <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :question %>
+    <%= f.text_field :question %>
+  </div>
+
+  <div class="field">
+    <%= f.label :answer %>
+    <%= f.text_field :answer %>
+  </div>
+
+  <div class="field">
+    <%= f.label :distractor_1 %>
+    <%= f.text_field :distractor_1 %>
+  </div>
+
+  <div class="field">
+    <%= f.label :distractor_2 %>
+    <%= f.text_field :distractor_2 %>
+  </div>
+
+  <div class="field">
+    <%= f.label :distractor_3 %>
+    <%= f.text_field :distractor_3 %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  question: MyString
+  answer: MyString
+  distractor_1: MyString
+  distractor_2: MyString
+  distractor_3: MyString
+
+two:
+  question: MyString
+  answer: MyString
+  distractor_1: MyString
+  distractor_2: MyString
+  distractor_3: MyString
