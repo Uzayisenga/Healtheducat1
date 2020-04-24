@@ -11,6 +11,7 @@ Rails.application.routes.draw do
   get 'welcome/index'
   get 'logins/login'
   root 'welcome#index'
+  get 'assesment/index'
   resources :account_activations, only: [:edit]
   resources :quizzes do
     resources :mc_questions
